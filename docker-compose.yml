@@ -8,6 +8,8 @@ services:
         - DEV=true
     ports:
       - 8006:8006
+    volumes:
+      - ./app:/app
     command: |
       sh -c "python manage.py runserver 0.0.0.0:8006"
     environment:
